@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ParticleNetwork } from "@/components/ui/particle-network";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,12 +32,14 @@ export default function RootLayout({
     <html lang="uz" className={`${inter.variable} dark`}>
       <body className="antialiased min-h-full" style={{ background: "#0F1729", color: "#fff" }}>
 
-        {/* Ambient gradient blobs — fixed, behind everything */}
+        {/* Particle network — canvas, mouse-interactive */}
+        <ParticleNetwork />
+
+        {/* Ambient blobs — subtle color behind particles */}
         <div
           aria-hidden="true"
           style={{ position: "fixed", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }}
         >
-          {/* Blob 1 — top-left, primary blue */}
           <div
             className="bg-blob"
             style={{
@@ -47,13 +50,12 @@ export default function RootLayout({
               left: "-260px",
               borderRadius: "50%",
               background: "#1570EF",
-              filter: "blur(160px)",
-              opacity: 0.075,
+              filter: "blur(180px)",
+              opacity: 0.055,
               animation: "blob-drift-1 28s ease-in-out infinite",
               willChange: "transform",
             }}
           />
-          {/* Blob 2 — right side, deep blue */}
           <div
             className="bg-blob"
             style={{
@@ -64,13 +66,12 @@ export default function RootLayout({
               right: "-220px",
               borderRadius: "50%",
               background: "#175CD3",
-              filter: "blur(140px)",
-              opacity: 0.06,
+              filter: "blur(160px)",
+              opacity: 0.045,
               animation: "blob-drift-2 36s ease-in-out infinite",
               willChange: "transform",
             }}
           />
-          {/* Blob 3 — bottom-center, light blue accent */}
           <div
             className="bg-blob"
             style={{
@@ -81,15 +82,15 @@ export default function RootLayout({
               left: "28%",
               borderRadius: "50%",
               background: "#53A3E9",
-              filter: "blur(130px)",
-              opacity: 0.04,
+              filter: "blur(150px)",
+              opacity: 0.03,
               animation: "blob-drift-3 44s ease-in-out infinite",
               willChange: "transform",
             }}
           />
         </div>
 
-        {/* Page content — above blobs */}
+        {/* Page content */}
         <div style={{ position: "relative", zIndex: 1 }}>
           {children}
         </div>
