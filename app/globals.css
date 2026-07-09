@@ -147,6 +147,39 @@
   }
 }
 
+/* ── Ambient blob animations ── */
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0px,    0px) scale(1);    }
+  33%       { transform: translate(70px,  50px) scale(1.06); }
+  66%       { transform: translate(-40px, 80px) scale(0.96); }
+}
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0px,    0px)   scale(1);    }
+  40%       { transform: translate(-90px, -40px) scale(1.08); }
+  75%       { transform: translate(60px,   60px) scale(0.94); }
+}
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0px,    0px)   scale(1);    }
+  30%       { transform: translate(50px,  -70px) scale(1.04); }
+  70%       { transform: translate(-60px,  40px) scale(0.97); }
+}
+
+/* Grain/noise texture — fixed overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob { animation: none !important; }
+}
+
 @layer utilities {
   .glass {
     background: rgba(255, 255, 255, 0.04);
