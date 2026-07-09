@@ -8,7 +8,7 @@ export function CTA() {
   const inView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <section id="contact" className="section-padding" ref={ref}>
+    <section id="contact" className="section-padding" ref={ref} style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="container mx-auto max-w-[1200px] px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 32 }}

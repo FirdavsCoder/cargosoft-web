@@ -7,7 +7,7 @@ export function SocialProof() {
   const inView = useInView(ref, { once: true, margin: "-15%" });
 
   return (
-    <section ref={ref} style={{ background: "#0F1729" }}>
+    <section ref={ref}>
       <div className="container mx-auto max-w-[1200px] px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

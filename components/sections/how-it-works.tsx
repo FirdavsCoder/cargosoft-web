@@ -30,7 +30,7 @@ export function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: "-15%" });
 
   return (
-    <section id="how-it-works" className="section-padding" ref={ref}>
+    <section id="how-it-works" className="section-padding" ref={ref} style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="container mx-auto max-w-[1200px] px-4 md:px-6">
         {/* Header */}
         <motion.div

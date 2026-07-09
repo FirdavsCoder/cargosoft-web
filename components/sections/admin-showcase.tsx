@@ -42,7 +42,7 @@ export function AdminShowcase() {
     <section
       ref={ref}
       className="section-padding"
-      style={{ background: "#0F1729" }}
+      style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
     >
       <div className="container mx-auto max-w-[1200px] px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
