@@ -1,9 +1,10 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
-import { Features } from "@/components/sections/features";
+import { TrackingShowcase } from "@/components/sections/tracking-showcase";
+import { AdminShowcase } from "@/components/sections/admin-showcase";
+import { TelegramShowcase } from "@/components/sections/telegram-showcase";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { DashboardPreview } from "@/components/sections/dashboard-preview";
 import { SocialProof } from "@/components/sections/social-proof";
 import { CTA } from "@/components/sections/cta";
 
@@ -13,10 +14,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Features />
-        <HowItWorks />
-        <DashboardPreview />
         <SocialProof />
+        <TrackingShowcase />
+        <AdminShowcase />
+        <TelegramShowcase />
+        <HowItWorks />
         <CTA />
       </main>
       <Footer />

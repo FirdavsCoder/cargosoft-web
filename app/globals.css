@@ -161,10 +161,6 @@
     background-clip: text;
   }
 
-  .glow-blue {
-    box-shadow: 0 0 80px rgba(21, 112, 239, 0.15);
-  }
-
   .section-padding {
     padding-top: 120px;
     padding-bottom: 120px;
