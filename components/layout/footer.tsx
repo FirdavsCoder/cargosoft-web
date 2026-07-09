@@ -55,7 +55,7 @@ export function Footer() {
               Aloqa
             </p>
             <a
-              href="https://t.me/"
+              href="https://t.me/obkeber"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-accent-text hover:text-white transition-colors duration-200"

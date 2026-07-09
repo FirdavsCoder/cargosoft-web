@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { ArrowRight, Send } from "lucide-react";
+import { DemoButton } from "@/components/ui/demo-modal";
 
 export function Hero() {
   return (
@@ -78,25 +79,18 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap items-center gap-3 mb-12"
             >
-              <a
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <DemoButton
                 className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm text-white transition-colors duration-200 hover:bg-[#175CD3]"
                 style={{
                   background: "#1570EF",
-                  boxShadow:
-                    "0 1px 2px rgba(0,0,0,0.3), 0 0 0 1px rgba(21,112,239,0.5)",
+                  boxShadow: "0 1px 2px rgba(0,0,0,0.3), 0 0 0 1px rgba(21,112,239,0.5)",
                 }}
               >
                 Demo so&apos;rash
-                <ArrowRight
-                  size={15}
-                  className="group-hover:translate-x-0.5 transition-transform"
-                />
-              </a>
+                <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
+              </DemoButton>
               <a
-                href="https://t.me/"
+                href="https://t.me/obkeber"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm text-white/70 hover:text-white transition-colors duration-200"

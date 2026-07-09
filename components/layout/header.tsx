@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { uz } from "@/content/uz";
 import { cn } from "@/lib/utils";
+import { DemoButton } from "@/components/ui/demo-modal";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,7 @@ export function Header() {
               width={140}
               height={36}
               priority
-              className="h-8 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
           </Link>
 
@@ -61,14 +62,11 @@ export function Header() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="https://t.me/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <DemoButton
               className="px-4 py-2 rounded-xl bg-accent-fill hover:bg-accent-deep text-white text-sm font-medium transition-colors duration-200"
             >
               {t.demo}
-            </a>
+            </DemoButton>
           </div>
 
           {/* Mobile menu toggle */}
@@ -99,14 +97,9 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="https://t.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full text-center px-4 py-3 rounded-xl bg-accent-fill text-white text-sm font-medium"
-            >
+            <DemoButton className="w-full text-center px-4 py-3 rounded-xl bg-accent-fill text-white text-sm font-medium">
               {t.demo}
-            </a>
+            </DemoButton>
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, Send } from "lucide-react";
+import { DemoButton } from "@/components/ui/demo-modal";
 
 export function CTA() {
   const ref = useRef(null);
@@ -41,20 +42,14 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <DemoButton
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white text-[#0F1729] font-semibold hover:bg-white/90 transition-all duration-200 shadow-lg"
               >
                 Demo so&apos;rash
-                <ArrowRight
-                  size={16}
-                  className="group-hover:translate-x-0.5 transition-transform"
-                />
-              </a>
+                <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+              </DemoButton>
               <a
-                href="https://t.me/"
+                href="https://t.me/obkeber"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-white/30 text-white hover:bg-white/10 font-medium transition-all duration-200"
