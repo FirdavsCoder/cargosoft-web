@@ -90,7 +90,7 @@ export function Hero() {
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </DemoButton>
               <a
-                href="https://t.me/obkeber"
+                href="https://t.me/ccc1_admin1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm text-white/70 hover:text-white transition-colors duration-200"

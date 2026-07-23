@@ -48,7 +48,7 @@ function DemoModal({ open, onClose }: { open: boolean; onClose: () => void }) {
     if (!valid) return;
     const msg = `📦 Demo so'rov:\n\n👤 Ism: ${name.trim()}\n📱 Tel: +998 ${fmtPhone(phone)}\n🏢 Kargo: ${cargo.trim()}`;
     try { navigator.clipboard.writeText(msg); } catch { /* clipboard ruxsati yo'q bo'lsa o'tkazib yuboramiz */ }
-    window.open("https://t.me/obkeber", "_blank", "noopener,noreferrer");
+    window.open("https://t.me/ccc1_admin1", "_blank", "noopener,noreferrer");
     setDone(true);
   };
 
